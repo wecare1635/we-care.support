@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta charset="utf-8"/>
+<head>
 <meta charset="utf-8"/>
 <title>We Care</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -65,39 +65,31 @@
             color: #0d47a1;
         }
     </style>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Professional services with a mission to serve the community." name="description"/><style>
-a:hover {
-  opacity: 0.8;
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/><style>
+.faq-section {
+  padding: 40px;
+  background-color: #f9f9f9;
 }
-@media (max-width: 600px) {
-  nav div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav a {
-    display: block;
-    margin: 5px 0;
-  }
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-item h3 {
+  cursor: pointer;
+  color: #0077cc;
+}
+.faq-item p {
+  display: none;
+  margin-top: 10px;
 }
 </style></head>
 <body>
-<nav style="background-color:#333;padding:10px 0;">
-<div style="max-width:1000px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px;">
-<div style="color:white;font-size:20px;">My Website</div>
-<div>
-<a href="#services" style="color:white;margin:0 10px;text-decoration:none;">Services</a>
-<a href="#contact" style="color:white;margin:0 10px;text-decoration:none;">Contact</a>
-</div>
-</div>
-</nav>
-
 <header>
 <img alt="We Care Logo" src="logo.jpg"/>
 <h1>We Care</h1>
-<div style="text-align:center;margin:30px 0;">
-<a href="#contact" style="background-color:#007BFF;color:white;padding:12px 24px;text-decoration:none;border-radius:5px;font-size:18px;">Book a Service</a>
-</div>
-
 <p>Connecting Families Abroad with Trusted Caregivers in Bangladesh</p>
 </header>
 <img alt="We Care Banner" class="banner" src="banner.png"/>
@@ -153,5 +145,26 @@ a:hover {
 <footer>
 <p>© 2024 We Care. All rights reserved.</p>
 </footer>
-</body>
+<section class="faq-section animate__animated animate__fadeInUp" id="faq">
+<h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+<div class="faq-item">
+<h3><i class="fas fa-chevron-down"></i> What services do you offer?</h3>
+<p>We offer a range of services including consulting, design, and development tailored to your needs.</p>
+</div>
+<div class="faq-item">
+<h3><i class="fas fa-chevron-down"></i> How can I contact you?</h3>
+<p>You can reach us via the contact form or email us directly at contact@example.com.</p>
+</div>
+<div class="faq-item">
+<h3><i class="fas fa-chevron-down"></i> Do you offer custom packages?</h3>
+<p>Yes, we can create custom packages based on your specific requirements.</p>
+</div>
+</section><script>
+document.querySelectorAll('.faq-item h3').forEach(item => {
+  item.addEventListener('click', () => {
+    const para = item.nextElementSibling;
+    para.style.display = para.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script></body>
 </html>
