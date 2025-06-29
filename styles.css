@@ -116,25 +116,38 @@ p {
     margin-top: 5px;
 }
 
-/* How to Avail Section */
+/* Responsive Step Images */
+.step img {
+    width: 100%;       /* Take full width of the parent container */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Optional: Responsive Step Container */
 .step {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 10px;
 }
-.step img {
-    width: 100vw;
-    max-height: 500px;
-    object-fit: cover;
-    display: block;
+
+/* Optional: Text Styling */
+.step h3 {
+    text-align: center;
+    color: #2E7D62;
 }
+
 .step-description {
     max-width: 800px;
-    margin: 10px auto 30px;
+    margin: 10px auto 20px;
     text-align: center;
     color: #555;
+    padding: 0 10px;
 }
+
 
 /* Contact Section */
 a {
