@@ -116,36 +116,49 @@ p {
     margin-top: 5px;
 }
 
-/* Responsive Step Images */
+/* Limit screen width for entire section */
+#how-to-avail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Step container styling */
+.step {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Image styling — dynamically shrink to 70% */
 .step img {
-    width: 100%;       /* Take full width of the parent container */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;
+    width: 70%;       /* ✅ Shrink to 70% of container */
+    max-width: 100%;  /* ✅ Prevent overflow on small screens */
+    height: auto;     /* ✅ Keep aspect ratio */
     border-radius: 8px;
     object-fit: cover;
 }
 
-/* Optional: Responsive Step Container */
-.step {
-    margin-bottom: 40px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    padding: 10px;
-}
-
-/* Optional: Text Styling */
+/* Text styling */
 .step h3 {
-    text-align: center;
     color: #2E7D62;
+    margin-bottom: 10px;
 }
 
 .step-description {
     max-width: 800px;
-    margin: 10px auto 20px;
-    text-align: center;
+    margin: 10px auto;
     color: #555;
-    padding: 0 10px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .step img {
+        width: 90%; /* ✅ Expand slightly on smaller screens for better view */
+    }
 }
 
 
