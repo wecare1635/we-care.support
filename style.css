@@ -1,0 +1,161 @@
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #CDEEE2, #3A6351);
+    color: white;
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+header img {
+    height: 80px;
+    margin-bottom: 15px;
+}
+header h1 {
+    margin: 10px 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+}
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Banner */
+/* Banner Split Section - Half Height */
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5FFFA; /* Hint of green */
+    padding: 20px 60px; /* Reduced padding */
+    gap: 20px;
+    min-height: 220px; /* Controls the vertical size */
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-text h1 {
+    color: #3A6351;
+    font-size: 1.8em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+}
+
+.banner-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .banner-image {
+        text-align: center;
+    }
+    .banner-image img {
+        max-width: 90%;
+    }
+    .banner-text h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #F5FFFA; /* Very light hint of green */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(58, 99, 81, 0.08);
+}
+h2 {
+    color: #3A6351;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+h3 {
+    color: #2E7D62;
+    margin-bottom: 10px;
+    text-align: center;
+}
+p {
+    font-size: 1.05em;
+}
+
+/* Services */
+.services ul {
+    padding-left: 20px;
+}
+.services ul ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* How to Avail Section */
+.step {
+    margin-bottom: 60px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.step img {
+    width: 100vw;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.step-description {
+    max-width: 800px;
+    margin: 10px auto 30px;
+    text-align: center;
+    color: #555;
+}
+
+/* Contact Section */
+a {
+    color: #2E7D62;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #3A6351;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

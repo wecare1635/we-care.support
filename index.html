@@ -1,134 +1,110 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>We Care</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4faff;
-            color: #333;
-        }
-        header {
-            background: linear-gradient(to right, #6ec6ff, #2196f3);
-            color: white;
-            padding: 40px 20px 20px 20px;
-            text-align: center;
-        }
-        header img {
-            height: 80px;
-            margin-bottom: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .banner {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            color: #1976d2;
-            margin-bottom: 20px;
-        }
-        .services ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .how-it-works {
-            background-color: #e3f2fd;
-            border-radius: 10px;
-            padding: 20px;
-            font-family: monospace;
-            white-space: pre-wrap;
-        }
-        footer {
-            background-color: #1976d2;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        a {
-            color: #0d47a1;
-        }
-    </style>
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style></head>
+<link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
+
 <header>
-<img alt="We Care Logo" src="logo.jpg"/>
-<h1>We Care</h1>
-<p>Connecting Families Abroad with Trusted Caregivers in Bangladesh</p>
+  <!-- <img src="logo.jpg" alt="We Care Logo"> -->
+  <h1>We Care</h1>
+  <p>Connecting Families Abroad with Trusted Caregivers in Bangladesh</p>
 </header>
-<img alt="We Care Banner" class="banner" src="banner.png"/>
+
+<div class="banner-container">
+  <div class="banner-text">
+    <h1>Connecting Families Abroad with Trusted Caregivers in Bangladesh</h1>
+  </div>
+  <div class="banner-image">
+    <img src="banner.png" alt="Banner Image">
+  </div>
+</div>
+
 <section>
-<h2>Mission</h2>
-<p>To empower families by providing compassionate and reliable care for the elderly in Bangladesh, ensuring they receive the health support they need while fostering peace of mind for their loved ones living abroad.</p>
+  <h2>Mission</h2>
+  <p>To empower families by providing compassionate and reliable care for the elderly in Bangladesh, ensuring they receive the health support they need while fostering peace of mind for their loved ones living abroad.</p>
 </section>
+
 <section>
-<h2>Purpose</h2>
-<p>WeCare is dedicated to bridging the gap between families and their elderly loved ones. Our platform connects young people living overseas with trusted human helpers in Bangladesh, facilitating essential healthcare services. We aim to enhance the well-being of older adults by making healthcare access easier, fostering independence, and ensuring that families stay connected and involved in their care.</p>
+  <h2>Purpose</h2>
+  <p>WeCare is dedicated to bridging the gap between families and their elderly loved ones. Our platform connects families living overseas with trusted helpers in Bangladesh, facilitating essential healthcare services. We aim to enhance the well-being of older adults by making healthcare access easier, fostering independence, and ensuring families stay connected and involved in their care.</p>
 </section>
+
 <section class="services">
-<h2>Our Services</h2>
-<ul>
-<li>Accompanying elderly to:
-            <ul>
-<li>Doctors Chamber</li>
-<li>Diagnostic Test Center</li>
-<li>Pharmacy</li>
-</ul>
-</li>
-<li>Transport Management</li>
-<li>Patient Pickup and Drop-off</li>
-<li>Doctors Appointment Oversight</li>
-<li>Live Status Update During Service</li>
-<li>Note Taking During Doctor's Visit</li>
-</ul>
+  <h2>Our Services</h2>
+  <ul>
+    <li>Accompanying elderly to:
+      <ul>
+        <li>Doctors Chamber</li>
+        <li>Diagnostic Test Center</li>
+        <li>Pharmacy</li>
+      </ul>
+    </li>
+    <li>Transport Management</li>
+    <li>Patient Pickup and Drop-off</li>
+    <li>Doctors Appointment Oversight</li>
+    <li>Live Status Updates During Service</li>
+    <li>Note Taking During Doctor Visits</li>
+  </ul>
 </section>
-<section>
-<h2>How to Avail Our Service</h2>
-<p>Call us or email us to get started. Here's how it works:</p>
-<div class="how-it-works">
-        Contact Established
-              ↓
-        Date Fixed
-              ↓
-        Employee Meets Patient at Safe Location
-              ↓
-        Pickup and Transport to Doctor's Office
-              ↓
-        Stay with Patient, Take Notes
-              ↓
-        Drop-off at Home or Preferred Location
-              ↓
-        Buy Medicine from Pharmacy if Required
+
+<section id="how-to-avail">
+  <h2>How to Avail Our Service</h2>
+
+  <div class="step">
+    <h3>Step 1: Pickup or Meet</h3>
+    <img src="Step 1.png" alt="Step 1: Pickup or Meet">
+    <div class="step-description">
+      <p>Pickup from the patient’s location or meet at a safe location before visiting the WeCare office.</p>
     </div>
+  </div>
+
+  <div class="step">
+    <h3>Step 2: Pickup and Transport</h3>
+    <img src="Step 2.png" alt="Step 2: Pickup and Transport">
+    <div class="step-description">
+      <p>Our employee assists the patient into the vehicle and ensures comfort and safety during transport.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Step 3: Support at Appointment</h3>
+    <img src="Step 3.png" alt="Step 3: Employee Stays with Patient">
+    <div class="step-description">
+      <p>The employee stays with the patient, communicates with the doctor, and notes important instructions.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Step 4: Pharmacy Stop</h3>
+    <img src="Step 4.png" alt="Step 4: Pharmacy Stop">
+    <div class="step-description">
+      <p>Stop at the pharmacy to collect prescribed medications before heading home.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Step 5: Drop-off at Home</h3>
+    <img src="Step 5.png" alt="Step 5: Drop-off at Home">
+    <div class="step-description">
+      <p>Ensure the patient is comfortably settled at home and review post-visit instructions if needed.</p>
+    </div>
+  </div>
 </section>
+
 <section>
-<h2>Contact Us</h2>
-<p>Email: <a href="mailto:info@we-care.support">info@we-care.support</a></p>
-<p>Facebook: <a href="https://www.facebook.com/wecarebd2" target="_blank">facebook.com/wecarebd2</a></p>
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:info@we-care.support">info@we-care.support</a></p>
+  <p>Facebook: <a href="https://www.facebook.com/wecarebd2" target="_blank">facebook.com/wecarebd2</a></p>
 </section>
+
 <footer>
-<p>© 2024 We Care. All rights reserved.</p>
+  <p>© 2024 We Care. All rights reserved.</p>
 </footer>
-<section id="how-to-avail"><h2>How to Avail Our Service</h2><div class="service-steps" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;"><div style="flex: 1 1 250px; max-width: 300px; text-align: center; animation: fadeIn 1s ease-in;"><img alt="Step 1: Pickup or Meet" src="Step 1.png" style="width: 100%; height: auto; border-radius: 8px;"/><h3>Step 1: Pickup or Meet</h3><p>Pickup from patient’s location or meet at a safe location before visiting We-Care’s office.</p></div><div style="flex: 1 1 250px; max-width: 300px; text-align: center; animation: fadeIn 1s ease-in;"><img alt="Step 2: Pickup and Transport" src="Step 2.png" style="width: 100%; height: auto; border-radius: 8px;"/><h3>Step 2: Pickup and Transport</h3><p>Employee assists the patient into the vehicle and ensures comfort and safety during transport.</p></div><div style="flex: 1 1 250px; max-width: 300px; text-align: center; animation: fadeIn 1s ease-in;"><img alt="Step 3: Employee Stays with Patient" src="Step 3.png" style="width: 100%; height: auto; border-radius: 8px;"/><h3>Step 3: Employee Stays with Patient</h3><p>Employee stays with the patient, communicates with the doctor, and takes notes.</p></div><div style="flex: 1 1 250px; max-width: 300px; text-align: center; animation: fadeIn 1s ease-in;"><img alt="Step 4: Pharmacy Stop" src="Step 4.png" style="width: 100%; height: auto; border-radius: 8px;"/><h3>Step 4: Pharmacy Stop</h3><p>Stop by the pharmacy to collect prescribed medications before heading home.</p></div><div style="flex: 1 1 250px; max-width: 300px; text-align: center; animation: fadeIn 1s ease-in;"><img alt="Step 5: Drop-off at Home" src="Step 5.png" style="width: 100%; height: auto; border-radius: 8px;"/><h3>Step 5: Drop-off at Home</h3><p>Ensure the patient is comfortably settled at home and confirm all instructions are followed.</p></div></div></section></body>
+
+</body>
 </html>
