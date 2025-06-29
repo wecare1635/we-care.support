@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FFFFFF;
+    background-color: #F5FFFA;
     color: #333;
     line-height: 1.6;
 }
@@ -11,7 +11,7 @@ body {
 /* Header */
 header {
     background: linear-gradient(to right, #CDEEE2, #3A6351);
-    color: white;
+    color: #F5FFFA;
     text-align: center;
     padding: 50px 20px 30px;
 }
@@ -125,7 +125,6 @@ p {
 
 /* Step container styling */
 .step {
-    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     padding: 15px;
