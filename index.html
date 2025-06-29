@@ -15,7 +15,37 @@
   <p>Connecting Families Abroad with Trusted Caregivers in Bangladesh</p>
 </header>
 
-<div class="banner-container">
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="#home">We Care</a>
+    </div>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="#home" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#mission" class="nav-link">Mission</a>
+      </li>
+      <li class="nav-item">
+        <a href="#services" class="nav-link">Services</a>
+      </li>
+      <li class="nav-item">
+        <a href="#how-to-avail" class="nav-link">How It Works</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contact" class="nav-link">Contact</a>
+      </li>
+    </ul>
+    <div class="nav-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
+<div id="home" class="banner-container">
   <div class="banner-text">
     <h1>Connecting Families Abroad with Trusted Caregivers in Bangladesh</h1>
   </div>
@@ -24,7 +54,7 @@
   </div>
 </div>
 
-<section>
+<section id="mission">
   <h2>Mission</h2>
   <p>To empower families by providing compassionate and reliable care for the elderly in Bangladesh, ensuring they receive the health support they need while fostering peace of mind for their loved ones living abroad.</p>
 </section>
@@ -34,7 +64,7 @@
   <p>WeCare is dedicated to bridging the gap between families and their elderly loved ones. Our platform connects families living overseas with trusted helpers in Bangladesh, facilitating essential healthcare services. We aim to enhance the well-being of older adults by making healthcare access easier, fostering independence, and ensuring families stay connected and involved in their care.</p>
 </section>
 
-<section class="services">
+<section id="services" class="services">
   <h2>Our Services</h2>
   <ul>
     <li>Accompanying elderly to:
@@ -96,7 +126,7 @@
   </div>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact Us</h2>
   <p>Email: <a href="mailto:info@we-care.support">info@we-care.support</a></p>
   <p>Facebook: <a href="https://www.facebook.com/wecarebd2" target="_blank">facebook.com/wecarebd2</a></p>
@@ -105,6 +135,37 @@
 <footer>
   <p>© 2024 We Care. All rights reserved.</p>
 </footer>
+
+<script>
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenu.addEventListener('click', function() {
+    mobileMenu.classList.toggle('is-active');
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    mobileMenu.classList.remove('is-active');
+    navMenu.classList.remove('active');
+}));
+</script>
 
 </body>
 </html>

@@ -1,5 +1,9 @@
 
 /* General Styling */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,12 +12,127 @@ body {
     line-height: 1.6;
 }
 
+/* Scroll offset for sticky navigation */
+section {
+    scroll-margin-top: 80px;
+}
+
+#home {
+    scroll-margin-top: 80px;
+}
+
 /* Header */
 header {
     background: linear-gradient(to right, #CDEEE2, #3A6351);
     color: #F5FFFA;
     text-align: center;
     padding: 50px 20px 30px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #3A6351;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-logo a {
+    color: #F5FFFA;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: #F5FFFA;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: #CDEEE2;
+    text-decoration: none;
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #F5FFFA;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Mobile Menu Animation */
+.nav-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.nav-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #3A6351;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
 }
 header img {
     height: 80px;
@@ -183,4 +302,3 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
