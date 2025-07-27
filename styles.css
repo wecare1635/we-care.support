@@ -192,6 +192,8 @@ header p {
     background: linear-gradient(90deg, transparent 0%, #2E7D62 50%, transparent 100%);
 }
 
+
+
 .banner-text {
     flex: 1;
     padding-right: 20px;
@@ -303,6 +305,31 @@ p {
     line-height: 1.8;
     text-align: justify;
 }
+
+
+.about-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.about-columns .column {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.about-columns h2 {
+  color: #2E7D62;
+  margin-bottom: 10px;
+}
+
+.about-columns p {
+  line-height: 1.6;
+  color: #333;
+}
+
 
 /* Services */
 /* Grid container for new service layout */
