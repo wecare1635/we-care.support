@@ -355,7 +355,7 @@ header p {
 /* Section Styling */
 section {
     padding: 70px 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 50px auto;
     background: linear-gradient(135deg, #F5FFFA 0%, #ffffff 100%);
     border-radius: 20px;
@@ -778,7 +778,7 @@ p {
 
 /* How to Avail Section - Modern Timeline */
 #how-to-avail {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 50px auto;
     padding: 70px 40px;
     background: linear-gradient(135deg, #F5FFFA 0%, #ffffff 100%);
