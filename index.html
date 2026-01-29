@@ -180,10 +180,68 @@
 
 <section id="contact">
   <h2>Contact Us</h2>
-  <p>Phone (USA): <a href="+1-480-745-9021">+1 (480) 745 9021</a></p>
-  <p>Phone (BD): <a href="+8801341775467">+880 1341 775467</a></p>
-  <p>Email: <a href="mailto:wecarebd02@gmail.com">wecarebd02@gmail.com</a></p>
-  <p>Facebook: <a href="https://www.facebook.com/wecarebd2" target="_blank">facebook.com/wecarebd2</a></p>
+
+  <div class="contact-container">
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>Phone (USA): <a href="tel:+14807459021">+1 (480) 745 9021</a></p>
+      <p>Phone (BD): <a href="tel:+8801341775467">+880 1341 775467</a></p>
+      <p>Email: <a href="mailto:wecarebd02@gmail.com">wecarebd02@gmail.com</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/wecarebd2" target="_blank">facebook.com/wecarebd2</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <h3>Request Service Information</h3>
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 (XXX) XXX-XXXX">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceDate">When are you planning to schedule service? *</label>
+          <input type="date" id="serviceDate" name="serviceDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="callbackTime">Preferred time for service schedule call *</label>
+          <select id="callbackTime" name="callbackTime" required>
+            <option value="">Select a time</option>
+            <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+            <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+            <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+            <option value="anytime">Anytime</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Information (Optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+        </div>
+
+        <!-- Hidden field to help identify form submissions -->
+        <input type="hidden" name="_subject" value="New WeCare Service Request">
+
+        <button type="submit" class="submit-btn">Submit Request</button>
+      </form>
+      <p class="form-note">* Required fields</p>
+      <div class="form-success" id="formSuccess">✓ Thank you! Your request has been received. We will contact you shortly.</div>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -219,6 +277,62 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     mobileMenu.classList.remove('is-active');
     navMenu.classList.remove('active');
 }));
+
+// Contact Form Handling with Formspree
+const contactForm = document.getElementById('contactForm');
+const successMessage = document.getElementById('formSuccess');
+
+contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Disable submit button to prevent double submission
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+        // Get form data
+        const formData = new FormData(contactForm);
+
+        // Send to Formspree (if configured) or handle locally
+        const formAction = contactForm.getAttribute('action');
+
+        if (formAction && formAction.includes('formspree.io')) {
+            // Send to Formspree
+            const response = await fetch(formAction, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Show success message
+                successMessage.classList.add('show');
+                contactForm.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } else {
+            // If Formspree is not configured, show warning
+            alert('⚠️ Form not configured yet!\n\nPlease set up Formspree by:\n1. Going to https://formspree.io\n2. Creating an account with wecarebd02@gmail.com\n3. Getting your form endpoint\n4. Replacing YOUR_FORM_ID in the form action');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again or contact us directly.');
+    } finally {
+        // Re-enable submit button
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
 </script>
 
 </body>
