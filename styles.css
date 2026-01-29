@@ -665,7 +665,7 @@ p {
 }
 
 /* Responsive Design for Timeline */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .timeline-container {
         flex-direction: column;
         gap: 30px;
